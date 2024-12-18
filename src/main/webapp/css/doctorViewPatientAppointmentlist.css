@@ -1,0 +1,219 @@
+
+body {
+    font-family: Arial, sans-serif;
+background-color: #c7bfbf;
+    margin: 0;
+    padding: 0;
+}
+
+#admin {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 20px;
+    background-color: rgb(42, 42, 192);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 15px 2px;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    border-right: none;
+}
+
+#admin .heading {
+    text-align: center;
+    padding: 15px 2px;
+}
+
+#admin h3 {
+    margin: 0;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.hamburger-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.menu-icon,
+.close-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: inline-block;
+    color: black;
+    padding: 10px 0;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.sidebar {
+    z-index: 1;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #333;
+    transition: 0.5s;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+.sidebar .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 36px;
+    color: white;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 8px 16px;
+    text-align: left;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #f2f2f2;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+#menu-toggle:checked ~ .sidebar {
+    left: 0;
+}
+
+#logout {
+    margin-top: 400px;
+    border: 2px solid rgb(88, 86, 86);
+    text-align: center;
+    border-radius: 10px;
+    background-color: blue;
+    padding: 2px;
+}
+
+#logout:hover {
+    background-color: rgb(219, 211, 211);
+    color: rgb(70, 70, 219);
+}
+
+i:hover {
+    color: rgb(70, 70, 219);
+}
+
+
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table thead {
+    background-color: blue;
+    color: white;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button[name="deny"] {
+    background-color: #dc3545;
+}
+
+button[name="deny"]:hover {
+    background-color: #c82333;
+}
+
+button[name="delete"] {
+    background-color: #6c757d;
+}
+
+button[name="delete"]:hover {
+    background-color: #5a6268;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    table {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    table th, table td {
+        padding: 10px;
+    }
+
+    button {
+        padding: 8px 10px;
+    }
+}

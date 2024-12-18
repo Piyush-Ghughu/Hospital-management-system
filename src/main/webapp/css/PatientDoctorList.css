@@ -1,0 +1,182 @@
+body {
+	background-color: #c7bfbf;
+	margin: 0;
+    font-family: Arial, sans-serif; /* Basic font styling */
+}
+
+#admin {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 300px;
+	height: 20px;
+	background-color: rgb(42, 42, 192);
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+	padding: 15px 2px;
+	color: rgb(255, 255, 255);
+	border: 2px solid rgb(255, 255, 255);
+	border-right: none;
+}
+
+.hamburger-menu {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 2;
+}
+
+.menu-icon, .close-icon {
+	font-size: 30px;
+	cursor: pointer;
+}
+
+#menu-toggle {
+	display: none;
+}
+
+.sidebar {
+	z-index: 1;
+	height: 100%;
+	width: 250px;
+	position: fixed;
+	top: 0;
+	left: -250px;
+	background-color: #333;
+	transition: 0.5s;
+	overflow-x: hidden;
+	padding-top: 60px;
+}
+
+.heading i{
+	padding: 5px;
+	margin:5px;
+}
+
+.sidebar .close-icon {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	font-size: 36px;
+	color: white;
+}
+
+.sidebar ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.sidebar ul li {
+	padding: 8px 16px;
+	text-align: left;
+}
+
+.sidebar ul li a {
+	text-decoration: none;
+	font-size: 18px;
+	color: #f2f2f2;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+	background-color: #575757;
+}
+
+#menu-toggle:checked ~ .sidebar {
+	left: 0;
+}
+#logout {
+	margin-top: 400px;
+	border: 2px solid rgb(88, 86, 86);
+	text-align: center;
+	border-radius: 10px;
+	background-color: blue;
+	padding: 2px;
+}
+
+
+#patientlist {
+    width: 80%; 
+    max-width: 1200px; 
+    margin: 50px auto; 
+    padding: 20px; 
+    background-color: #ffffff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    margin-top: 100px;
+}
+
+
+#patientlist table {
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+
+#patientlist th, #patientlist td {
+    padding: 12px 15px; 
+    text-align: left; 
+    border-bottom: 1px solid #ddd; 
+}
+
+
+#patientlist th {
+    background-color: #007BFF; 
+    color: white; 
+    text-align: center; 
+    font-size: 18px; 
+}
+
+#patientlist td {
+    padding: 12px 15px; 
+    text-align: center; 
+    vertical-align: middle; 
+    border-bottom: 1px solid #ddd; 
+    font-size: 16px;
+    color: #333;
+}
+
+
+#patientlist tr:nth-child(even) {
+    background-color: #f9f9f9; 
+}
+
+
+#patientlist tr:hover {
+    background-color: #f1f1f1; 
+}
+
+
+.table-container {
+    max-height: 400px; 
+    overflow-y: auto;
+}
+
+.appointment-btn {
+    padding: 8px 16px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Styling after clicking the button */
+.appointment-btn:disabled {
+    background-color: red;
+    cursor: not-allowed;
+}
+
+/* Hover effect */
+.appointment-btn:hover:not(:disabled) {
+    background-color: darkgreen;
+}
+

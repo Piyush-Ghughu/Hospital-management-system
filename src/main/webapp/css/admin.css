@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #2c8831;
+}
+
+.hamburger-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2; /* Ensure the hamburger menu is above other content */
+}
+
+.menu-icon,
+.close-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: inline-block;
+    font-size: 30px;
+    color: black;
+    padding: 10px 0; /* Adjust this value to move the icon down */
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.sidebar {
+    z-index: 1;
+    height: 100%;
+    width: 250px;       
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #333;
+    transition: 0.5s;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+.sidebar .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 36px;
+    color: white;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 8px 16px;
+    text-align: left;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #f2f2f2;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+#menu-toggle:checked ~ .sidebar {
+    left: 0;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content h1 {
+    text-align: center;
+}
+
+.content p {
+    text-align: center;
+    font-size: 20px;
+}
+
+h1{
+    text-align: center;
+    color: #45a049;
+    border-bottom: 1px solid #45a049;
+}
+.new-user-link {
+    /* Your styles here */
+    color: #4CAF50; /* Example style */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Example style */
+    border: 2px solid white;
+    text-align: center;
+    background-color: #7278cc;
+}
+
+.new-user-link:hover {
+    /* Styles for hover effect */
+    color: #45a049; /* Example hover color */
+}
+#error-message{
+	color:red;
+}
+.error-message{
+	color:red;
+}

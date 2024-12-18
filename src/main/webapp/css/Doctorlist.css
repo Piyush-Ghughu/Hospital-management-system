@@ -1,0 +1,176 @@
+@charset "UTF-8";
+body {
+	background-color: #c7bfbf;
+}
+body, html {
+	height: 100%;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#admin {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 300px; /* Adjust the width as needed */
+	height: 20px; /* Full height of the viewport */
+	background-color: #fff;
+	border-top-left-radius: 20px; /* Curved top left corner */
+	border-bottom-left-radius: 20px; /* Curved bottom left corner */
+	box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+	/* Optional: Adds a subtle shadow for better visibility */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(42, 42, 192);
+	margin-top: 10px;
+	padding: 15px 2px;
+	/* padding-left: 2px;
+    padding-right: 2px; */
+	color: rgb(255, 255, 255);
+	border: 2px solid rgb(255, 255, 255);
+	border-right: none;
+}
+
+#admin .heading {
+	text-align: center;
+	size: 25px;
+	padding: 15px 2px;
+}
+
+#admin h3 {
+	margin: 0;
+	padding: 20px;
+	color: rgb(255, 255, 255);
+	size: 25px;
+}
+
+.hamburger-menu {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 2; /* Ensure the hamburger menu is above other content */
+}
+
+.menu-icon, .close-icon {
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.menu-icon {
+	display: inline-block;
+	font-size: 30px;
+	color: black;
+	padding: 10px 0; /* Adjust this value to move the icon down */
+}
+
+#menu-toggle {
+	display: none;
+}
+
+.sidebar {
+	z-index: 1;
+	height: 100%;
+	width: 250px;
+	position: fixed;
+	top: 0;
+	left: -250px;
+	background-color: #333;
+	transition: 0.5s;
+	overflow-x: hidden;
+	padding-top: 60px;
+}
+
+.sidebar .close-icon {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	font-size: 36px;
+	color: white;
+}
+
+.sidebar ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.sidebar ul li {
+	padding: 8px 16px;
+	text-align: left;
+}
+
+.sidebar ul li a {
+	text-decoration: none;
+	font-size: 18px;
+	color: #f2f2f2;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+	background-color: #575757;
+}
+
+#menu-toggle:checked ~ .sidebar {
+	left: 0;
+}
+#Alist {
+    margin-top: 50px;
+    border-radius: 10px;
+    width: 90%; /* Adjust the width as needed */
+    max-height: 75%; /* Set the maximum height */
+    text-align: center; /* Center the content inside the section */
+    padding: 20px;
+    background-color: #cfc8f6; /* Optional: add background color */
+    box-shadow: 0 0 10px rgba(0, 0, 100, 1);
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+#Alist tr td {
+    padding: 0 20px;
+}
+
+#Alist tr td a {
+    display: block;
+    padding: 5px;
+    margin: 5px;
+    background-color: #00025c;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#Alist tr td a:hover {
+    background-color: blue;
+}
+
+#Alist a {
+    display: block;
+    width: 97%;
+    padding: 5px;
+    margin: 5px;
+    background-color: #3f0926;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#Alist a:hover {
+    background-color: rgb(87, 1, 1);
+    color: yellow;
+}
+
+#logout {
+	margin-top: 400px;
+	border: 2px solid rgb(88, 86, 86);
+	text-align: center;
+	border-radius: 10px;
+	background-color: blue;
+	padding: 2px;
+}
